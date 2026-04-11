@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AVD Intelligence - Quick Report</title>
+<title> One Final</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Barlow+Condensed:wght@300;400;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -270,11 +271,7 @@ body.light body::before{ opacity:0.05; }
 @keyframes kpiCountUp{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
 .kpi-value.animating{animation:kpiCountUp 0.3s ease both;}
 
-/* ── Health ring animation ────────────────────────────────────────── */
-.health-ring-svg-animated circle.ring-fill{
-  stroke-dashoffset:999;
-  transition:stroke-dashoffset 1s cubic-bezier(0.4,0,0.2,1);
-}
+
 
 /* ── Stagger fade rows ────────────────────────────────────────────── */
 @keyframes rowIn{from{opacity:0;transform:translateY(5px);}to{opacity:1;transform:none;}}
@@ -384,62 +381,6 @@ body.light body::before{ opacity:0.05; }
 /* Topo no-data hint */
 .topo-hint{display:flex;align-items:center;justify-content:center;height:200px;font-family:var(--font-mono);font-size:11px;color:var(--text-muted);}
 
-/* ── Networking tab ──────────────────────────────────────────────── */
-.net-section-label{
-  font-family:var(--font-mono);font-size:9px;letter-spacing:2px;
-  text-transform:uppercase;color:var(--text-muted);
-  padding:10px 0 6px;border-bottom:1px solid var(--border);
-  margin:14px 0 8px;
-}
-.net-topology-card{
-  background:var(--bg-card);border:1px solid var(--border);
-  border-radius:var(--radius-lg);overflow:hidden;margin-bottom:10px;
-  transition:border-color 0.2s;
-}
-.net-topology-card:hover{border-color:var(--border-lit);}
-.net-vnet-header{
-  display:flex;align-items:center;gap:10px;
-  padding:10px 14px;background:var(--bg-panel);
-  border-bottom:1px solid var(--border);cursor:pointer;
-}
-.net-vnet-name{font-family:var(--font-display);font-weight:700;font-size:14px;flex:1;}
-.net-subnet-row{
-  display:flex;align-items:flex-start;gap:10px;
-  padding:8px 14px 8px 28px;border-bottom:1px solid var(--bg-panel);
-}
-.net-subnet-row:last-child{border-bottom:none;}
-.net-subnet-icon{font-size:12px;flex-shrink:0;margin-top:1px;}
-.net-subnet-info{flex:1;min-width:0;}
-.net-subnet-name{font-family:var(--font-mono);font-size:10px;color:var(--cyan);}
-.net-subnet-prefix{font-family:var(--font-mono);font-size:9px;color:var(--text-muted);}
-.net-subnet-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px;}
-.net-host-chip{
-  display:inline-flex;align-items:center;gap:3px;
-  font-family:var(--font-mono);font-size:8px;
-  background:var(--bg-panel);border:1px solid var(--border);
-  color:var(--text-secondary);padding:1px 6px;border-radius:3px;
-}
-.net-warning-strip{
-  display:flex;align-items:center;gap:6px;
-  background:#f59e0b10;border:1px solid #f59e0b30;
-  border-radius:var(--radius);padding:5px 10px;margin-top:4px;
-  font-family:var(--font-mono);font-size:9px;color:var(--amber);
-}
-.net-finding-strip{
-  display:flex;align-items:flex-start;gap:6px;padding:5px 10px;
-  margin-bottom:4px;border-radius:var(--radius);font-family:var(--font-mono);font-size:9px;
-}
-.net-finding-high  {background:#ef444410;border-left:3px solid var(--red);color:var(--red);}
-.net-finding-medium{background:#f59e0b10;border-left:3px solid var(--amber);color:var(--amber);}
-.net-finding-low   {background:#ffffff08;border-left:3px solid var(--text-dim);color:var(--text-muted);}
-.pe-status-badge{
-  display:inline-flex;align-items:center;gap:4px;
-  font-family:var(--font-mono);font-size:9px;padding:2px 7px;
-  border-radius:3px;border:1px solid;
-}
-.pe-enabled {background:#00d4ff15;border-color:#00d4ff40;color:var(--cyan);}
-.pe-disabled{background:#ef444415;border-color:#ef444440;color:var(--red);}
-.pe-unknown {background:#ffffff08;border-color:var(--border);color:var(--text-muted);}
 
 /* ── RDP analysis flyout button ──────────────────────────────────── */
 .rdp-analysis-btn{
