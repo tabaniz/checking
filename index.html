@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> Three Final</title>
+<title> Four Final</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Barlow+Condensed:wght@300;400;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
@@ -445,19 +445,6 @@ body.light body::before{ opacity:0.05; }
 .rdp-prop{display:inline-flex;align-items:center;gap:4px;font-family:var(--font-mono);font-size:9px;background:var(--bg-panel);border:1px solid var(--border);border-radius:3px;padding:2px 7px;margin:2px;}
 .rdp-k{color:var(--text-muted);} .rdp-v{color:var(--cyan);}
 
-/* ── Flyout ──────────────────────────────────────────────────────── */
-.flyout-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:200;backdrop-filter:blur(2px);}
-.flyout-overlay.open{display:flex;align-items:flex-start;justify-content:flex-end;animation:ovFadeIn 0.2s ease;}
-@keyframes ovFadeIn{from{opacity:0}to{opacity:1}}
-.flyout-panel{width:min(680px,90vw);height:100vh;background:var(--bg-panel);border-left:1px solid var(--border);overflow-y:auto;display:flex;flex-direction:column;transform:translateX(100%);transition:transform 0.22s cubic-bezier(0.4,0,0.2,1);}
-.flyout-overlay.open .flyout-panel{transform:translateX(0);}
-.flyout-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg-panel);z-index:1;}
-.flyout-title{font-family:var(--font-display);font-size:14px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-primary);}
-.flyout-close{background:none;border:1px solid var(--border);color:var(--text-muted);width:28px;height:28px;border-radius:4px;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;}
-.flyout-close:hover{color:var(--text-primary);border-color:var(--cyan-dim);}
-.flyout-body{padding:16px 20px;flex:1;}
-@keyframes frIn{from{opacity:0;transform:translateX(-7px)}to{opacity:1;transform:none}}
-.fr{opacity:0;animation:frIn 0.22s ease both;}
 
 /* ── Report Builder Modal ─────────────────────────────────────────── */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.72);z-index:300;backdrop-filter:blur(4px);align-items:center;justify-content:center;}
